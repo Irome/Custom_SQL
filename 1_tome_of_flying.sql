@@ -18,8 +18,11 @@ INSERT INTO `item_template` (`entry`, `class`, `subclass`, `name`, `displayid`, 
 --	UPDATE MOUNT MODELS
 -- --------------------------------------------------------------------------------------
 -- 28040 -- Black Proto-Drake
-
-UPDATE `creature_template` set `modelid4` = 28040 where `entry` = 32568; -- Black Proto-Drake
+UPDATE `creature_template` set `modelid1` = 31803 where `entry` = 32568; -- Blazing Hippogryph
+-- UPDATE `creature_template` set `modelid2` = 17722 where `entry` = 32568; -- Swift Yellow Wind Rider
+UPDATE `creature_template` set `modelid2` = 18164 where `entry` = 32568; -- Furor's Fabled Steed (Brazen Taxi)
+UPDATE `creature_template` set `modelid3` = 31958 where `entry` = 32568; -- Celestial Steed
+UPDATE `creature_template` set `modelid3` = 28040 where `entry` = 32568; -- Black Proto-Drake
 
 
 -- --------------------------------------------------------------------------------------
