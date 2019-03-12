@@ -22,7 +22,7 @@ UPDATE `creature_template` set `modelid1` = 31803 where `entry` = 32568; -- Blaz
 -- UPDATE `creature_template` set `modelid2` = 17722 where `entry` = 32568; -- Swift Yellow Wind Rider
 UPDATE `creature_template` set `modelid2` = 18164 where `entry` = 32568; -- Furor's Fabled Steed (Brazen Taxi)
 UPDATE `creature_template` set `modelid3` = 31958 where `entry` = 32568; -- Celestial Steed
-UPDATE `creature_template` set `modelid3` = 28040 where `entry` = 32568; -- Black Proto-Drake
+UPDATE `creature_template` set `modelid4` = 28040 where `entry` = 32568; -- Black Proto-Drake
 
 
 -- --------------------------------------------------------------------------------------
@@ -58,12 +58,11 @@ INSERT INTO `npc_vendor` (`entry`, `slot`, `item`, `maxcount`, `incrtime`, `Exte
 ('601047','0','700999','0','0','0');
 
 -- --------------------------------------------------------------------------------------
---	DISABLE BG / ARENA FLYING
+--	DISABLE BG FLYING
 -- --------------------------------------------------------------------------------------
 DELETE FROM `disables` WHERE `sourceType`=0 AND `entry`=31700;
-
-INSERT INTO `disables` (`sourceType`, `entry`, `flags`, `params_0`, `params_1`, `comment`) VALUES (0, 31700, 49, '489,529,30,566,607,628,618,617', '3702,85,3518,3522,3698', 'disable Azeroth Flying in Arena and battlegrounds');
-
-
+DELETE FROM `disables` WHERE `sourceType`=3 AND `entry`=31700;
+INSERT INTO `disables` (`sourceType`, `entry`, `flags`, `params_0`, `params_1`, `comment`) VALUES (3, 31700, 1, '', '', 'disable battleground Azeroth Flying');
+INSERT INTO `disables` (`sourceType`, `entry`, `flags`, `params_0`, `params_1`, `comment`) VALUES (0, 31700, 49, '618,617', '3702,85,3518,3522', 'disable arena Azeroth Flying');
 
 -- END OF LINE
