@@ -24,7 +24,6 @@ UPDATE `creature_template` set `modelid2` = 18164 where `entry` = 32568; -- Furo
 UPDATE `creature_template` set `modelid3` = 31958 where `entry` = 32568; -- Celestial Steed
 UPDATE `creature_template` set `modelid4` = 28040 where `entry` = 32568; -- Black Proto-Drake
 
-
 -- --------------------------------------------------------------------------------------
 --	REMOVE TOME OF FLYING VENDOR ITEMS
 -- --------------------------------------------------------------------------------------
